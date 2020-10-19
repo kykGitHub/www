@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bootstrap 实例</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+		<script src="./dist/jquery.min.js"></script>
+		<script src="./dist/popper.min.js"></script>
+		<script src="./dist/bootstrap.min.js"></script>
+		<script src="./dist/Chart.js"></script>
+		<style>
+			/* Make the image fully responsive */
+			.carousel-inner img {
+				width: 100%;
+				height: 100%;
+			}
+
+			.col img {
+				padding-right: 10px;
+				padding-left: 10px;
+			}
+
+			.img-thumbnail {
+				border: 0px solid #dee2e6;
+			}
+
+			.container {
+				border: 1px solid #efefef;
+				border-radius: 15px;
+				margin-top: 5px;
+			}
+
+			.col {
+				padding-right: 0px;
+				padding-left: 0px;
+				font-size: 15px;
+				margin-bottom: 10px;
+			}
+
+			.figure-caption {
+				font-size: 15px;
+			}
+			.input-group-text{
+				border-right: none;
+				background-color: #fff;
+			}
+			.form-control{
+				border-left: none;
+			}
+			.nav-link {
+			    padding: .15rem .15rem;
+			}
+			.nav-pills .nav-link {
+			    border-radius: 0;
+			}
+			body{
+				padding-bottom: 60px;
+			}
+			.input-group{
+			    padding: 10px;
+			    background-color: #758fc8;
+				}
+				.form-control {
+					border-radius: 1.5rem;
+				}
+				
+				.input-group-sm>.form-control{
+					border-radius: 1.5rem;
+				}
+				.input-group-sm>.input-group-prepend>.input-group-text{
+
+					border-top-left-radius: 1.5rem;
+					border-bottom-left-radius: 1.5rem;
+				}
+		</style>
+	</head>
+	<body>
+
+<div class="input-group input-group-sm">
+  <div class="input-group-prepend ">
+    <div class="input-group-text">
+      <svg width="1.2em" height="1.2em" color="#999999" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+        <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+      </svg>
+    </div>
+  </div>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+</div>
+
+		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" touch="true">
+			<!-- 指示符 -->
+			<ul class="carousel-indicators">
+				<li data-target="#demo" data-slide-to="0" class="active"></li>
+				<li data-target="#demo" data-slide-to="1"></li>
+				<li data-target="#demo" data-slide-to="2"></li>
+			</ul>
+
+			<!-- 轮播图片 -->
+			<div class="carousel-inner">
+				<div class="carousel-item active" data-interval="3000">
+					<img src="http://yl.jwu365.com/test/20200303163544044.jpg" class="d-block w-100">
+				</div>
+				<div class="carousel-item" data-interval="3000">
+					<img src="http://yl.jwu365.com/test/20200303163607962.jpg" class="d-block w-100">
+				</div>
+				<div class="carousel-item" data-interval="3000">
+					<img src="http://yl.jwu365.com/test/20200303163614077.jpg" class="d-block w-100">
+				</div>
+			</div>
+
+
+			<!-- 左右切换按钮 -->
+			<a class="carousel-control-prev" href="#carouselExampleControls" data-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleControls" data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
+
+		</div>
+
+
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<img src="http://yl.jwu365.com/weixin-jwy/image/main/sd_jkgl.png" alt="..." class="img-fluid ">
+					<br>康养驿站
+				</div>
+				<div class="col text-center"><img src="1.jpg" alt="..." class="img-fluid"><br>康养驿站</div>
+				<div class="col text-center"><img src="1.jpg" alt="..." class="img-fluid"><br>康养驿站</div>
+				<div class="col text-center"><img src="1.jpg" alt="..." class="img-fluid"><br>康养驿站</div>
+				<div class="col text-center"><img src="1.jpg" alt="..." class="img-fluid"><br>康养驿站</div>
+			</div>
+			<div class="row">
+				<div class="col text-center"><img src="1.jpg" alt="..." class="img-fluid"><br>康养驿站</div>
+				<div class="col text-center"><img src="1.jpg" alt="..." class="img-fluid"><br>康养驿站</div>
+				<div class="col text-center"><img src="1.jpg" alt="..." class="img-fluid"><br>康养驿站</div>
+				<div class="col text-center"><img src="1.jpg" alt="..." class="img-fluid"><br>康养驿站</div>
+				<div class="col text-center"><img src="1.jpg" alt="..." class="img-fluid"><br>康养驿站</div>
+			</div>
+		</div>
+
+		<canvas id="myChart" width="400" height="400"></canvas>
+		
+		<ul class="nav nav-pills nav-justified fixed-bottom bg-light">
+		  <li class="nav-item">
+		    <a class="nav-link" href="#"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-fill text-success" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+			    <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+			  </svg><br>主页</a>
+		  </li>
+		 <li class="nav-item">
+		   <a class="nav-link" href="#"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		 			    <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+		 			  </svg><br>主页</a>
+		 </li>
+		 <li class="nav-item">
+		   <a class="nav-link" href="#"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		 			    <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+		 			  </svg><br>主页</a>
+		 </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="#"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		  			    <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+		  			  </svg><br>主页</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="#"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		  			    <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+		  			  </svg><br>主页</a>
+		  </li>
+		</ul>
+		
+		<!-- <nav class="nav nav-pills fixed-bottom nav-justified navbar-light bg-light">
+		  <a class="nav-item nav-link active" href="#">
+			  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+			    <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+			  </svg>
+		  </a>
+		  <a class="nav-item nav-link" href="#">
+		  			  <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		  			    <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+		  			  </svg>
+		  			  <br>
+		  			  <span class="text-center">111</span>
+		  </a>
+		  <a class="nav-item nav-link" href="#">
+		  			  <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		  			    <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+		  			  </svg>
+		  			  <br>
+		  			  <span class="text-center">111</span>
+		  </a>
+		  <a class="nav-item nav-link" href="#">
+		  			  <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		  			    <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+		  			  </svg>
+		  			  <br>
+		  			  <span class="text-center">111</span>
+		  </a>
+		  <a class="nav-item nav-link" href="#">
+		  			  <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		  			    <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+		  			  </svg>
+		  			  <br>
+		  			  <span class="text-center">111</span>
+		  </a>
+		</nav> -->
+
+<script>
+	$(".form-control").click(function(){
+	  alert("111111");
+	});
+</script>
+		<script>
+			var ctx = document.getElementById('myChart');
+			var myChart = new Chart(ctx, {
+				type: 'line',
+				data: {
+					labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+					datasets: [{
+						label: '# of Votes',
+						data: [12, 19, 3, 5, 2, 300],
+						backgroundColor: [
+							'rgba(151,187,205,0.5)'
+						],
+						pointStrokeColor :[ '#fff'],  // 数据边框颜色
+						pointColor : ['rgba(151,187,205,1)'], // 数据点颜色
+						strokeColor : ['rgba(151,12,205,1)'],
+						borderColor: [
+							'rgba(220,220,220,1)'
+						],
+						borderWidth: 3
+					}]
+				},
+				options: {
+					scales: {
+						yAxes: [{
+							ticks: {
+								beginAtZero: true
+							}
+						}]
+					}
+				}
+			});
+
+			// new Chart(document.getElementById("chartjs-4"), {
+			// 	"type": "line",
+			// 	"data": {
+			// 		"labels": ["Red", "Blue", "Yellow"],
+			// 		"datasets": [{
+			// 			"label": "My First Dataset",
+			// 			"data": [300, 50, 100],
+			// 			"backgroundColor": ['rgba(255, 99, 132, 0.2)',
+			// 				'rgba(54, 162, 235, 0.2)',
+			// 				'rgba(255, 206, 86, 0.2)']
+			// 		}]
+			// 	}
+			// });
+			
+			// new Chart(document.getElementById("chartjs-0"), {
+			// 	"type": "line",
+			// 	"data": {
+			// 		"labels": ["January", "February", "March", "April", "May", "June", "July"],
+			// 		"datasets": [{
+			// 				"label": "My First Dataset1",
+			// 				"data": [65, 59, 80, 81, 56, 55, 40],
+			// 				"fill": false,
+			// 				"borderColor": "rgb(75, 192, 192)",
+			// 				"backgroundColor": "rgb(75, 192, 192)",
+			// 				"lineTension": 0.1,
+			// 				"borderWidth": 5,
+			// 			},
+			// 			{
+			// 				"label": "My First Dataset",
+			// 				"data": [15, 129, 130, 141, 126, 115, 110],
+			// 				"fill": false,
+			// 				"borderColor": "rgb(75, 100, 150)",
+			// 				"lineTension": 0.1,
+			// 				"borderWidth": 3,
+			// 			}
+			// 		]
+			// 	},
+			// 	"options": {
+			// 		scales: {
+			// 			yAxes: [{
+			// 				ticks: {
+			// 					beginAtZero: true
+			// 				}
+			// 			}]
+			// 		}
+			// 	}
+			// });
+		</script>
+	</body>
+</html>
